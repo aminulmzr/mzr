@@ -1,11 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sanhita</title>
+      
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px; /* Adjust based on your content */
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        
+        .btn {
+            width: 100%;
+            max-width: 300px; /* Adjust button width */
+            height: 100px; /* Adjust button height */
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff; /* White text */
+            background-color: #142bb3; /* Blue background */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #0a1659; /* Darker blue on hover */
+        }
+        
+        h3 {
+            font-weight: bold;
+            color: #333333; /* Dark text color */
+        }
+        
+        .blk {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 
-<!DOCTYPE html><html lang="en"><head><title>AHSEC Results 2020 - Official Mobile App</title><meta name="description" content="AHSEC Results 2020 - Official Mobile App"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Expires" content="0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-131430833-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments); }gtag('js', new Date());gtag('config', 'UA-131430833-1');</script><!-- Google analytics --><style>#mobile-main {width: calc(100% - 20px);margin: 20px 10px 10px 10px;font-family: 'Poppins', sans-serif;text-align: center;box-sizing: border-box;}#mobile-main form{padding: 15px;background: #ffffff;text-align: left;}input {background: #f8f8f8;border: 1px solid #ddd;height: 34px !important;box-sizing: border-box;width: 100%;border-radius: 30px;outline: 0;margin-bottom: 15px;}select {background: none;border: 0;}#mobile-main form label {font-family: 'Poppins', sans-serif;text-transform: uppercase;font-weight: 500;font-size: 14px;display: block;}</style><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script type="text/javascript">$(function () {GenerateCaptcha();$(document).on('click', '#rollsrch', function () {if ($('#rollcode').val().trim() == '') {alert('Please enter a valid Roll Code');$('#rollcode').focus();return false;}else if ($('#rollno').val().trim() == '') {alert('Please enter a valid Roll Number');$('#rollno').focus();return false;}else if (!ValidCaptcha()) {alert('Please enter the code as shown to get your result!');$('#rescaptcha').focus();return false;}else {$('#frm').submit();}});});function GenerateCaptcha() {var a = Math.ceil(Math.random() * 9) + '';var b = Math.ceil(Math.random() * 9) + '';var c = Math.ceil(Math.random() * 9) + '';var d = Math.ceil(Math.random() * 9) + '';var e = Math.ceil(Math.random() * 9) + '';var code = a + b + c + d;$('#generatedcaptcha').html(code);};function ValidCaptcha() {var str1 = $('#generatedcaptcha').html().trim();var str2 = $('#rescaptcha').val().trim();if (str1 == str2) {return true;} else {return false;}}</script></head><body style="background: #35c1c0 url(https://4.bp.blogspot.com/-lBVehkIaRtc/Wv6jVoPUzLI/AAAAAAAAAYU/FnCxYnm14QQdUrzZBLR5Mt1xXSvN8pmQACLcBGAs/s1600/mobile-bg.jpg); background-attachment:fixed; background-size:cover;"><div id="mobile-main"><img src="https://1.bp.blogspot.com/-gzWwrrUIyNU/Wv_b0f6YBLI/AAAAAAAAAZE/5HpKj3exmAoSj5uRz66Ppks2ylZlXwyZwCLcBGAs/s1600/AHSEC_logo.png" alt="AHSEC Assam Logo" title="AHSEC HS Final Results 2019"><br /><h2 style="color: #fae60c; font-size:24px; line-height:26px; margin:0 0 5px 0; text-shadow:1px 1px 1px rgba(0,0,0,.3)">Assam Higher Secondary Education Council (AHSEC)</h2><br /><h4 style="font-size:15px; font-weight:500; color:#fff; margin-top:0;">HS Final Results 2020 - <i>ANNOUNCED!</i></h4><form id="frm" name="frm" method="post" action="http://result.assamresult.in/result.php"><label style="margin-bottom:5px;">Enter Roll Code: </label><div style=" position:relative;"><input id="rollcode" name="rollcode" type="text" size="10" maxlength="5" style="padding:0 20px;" placeholder="Enter Roll Code"></div><label style="margin-bottom:5px;">Enter Roll Number: </label><input id="rollno" name="rollno" type="text" size="10" maxlength="5" style="padding:0 20px;" placeholder="Enter Roll Number"><label style="margin-bottom:5px;">Enter Captcha:</label><div style="position:relative;"><input id="rescaptcha" name="rescaptcha" type="text" size="6" maxlength="6" style="padding:0 20px 0 90px;" placeholder="Enter Captcha"><span id="generatedcaptcha" style="position:absolute; top:0; left:0; height:30px; padding:4px 20px 0 20px; font-weight:700; background:#ddd; border-radius:30px 0 0 30px;"></span></div><input name="rollsrch" id="rollsrch" type="button" value="Get Result" style="margin:0px 0 0px 0; width:100%; font-family: 'Poppins', sans-serif; color:#000; font-weight:500; font-size:15px; height:inherit !important; display:block; padding:10px 20px; border-radius:30px; background:#f9ac3a;"></form><br /><!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120261305-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-120261305-6');
-</script>
-</body></html>
+<body>
+    <div class="container">
+        <h3>Old To New Criminal Law Explainer</h3>
+        
+        <div class="blk">
+            <a href="ipcbns.html"><button type="button" class="btn">Bhartiya Nyay Sanhita, 2023<br>भारतीय न्याय संहिता, 2023</button></a>
+            <a href="crpcbnss.html"><button type="button" class="btn">Bhartiya Nagrik Suraksha Sanhita, 2023<br>भारतीय नागरिक सुरक्षा संहिता, 2023</button></a>
+            <a href="evdbsa.html"><button type="button" class="btn">Bhartiya Sakshya Adhiniyam, 2023<br>भारतीय साक्ष्य अधिनियम, 2023</button></a>
+        </div>
+    </div>
+</body>
+</html>
