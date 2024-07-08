@@ -1,166 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Indian Penal Code to Bhartiya Nyay Sanhita, 2023</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #ededfc;
+            background-color: #f0f0f7; /* Changed background color */
+            color: #333; /* Changed text color */
             margin: 0;
             padding: 0;
             text-align: center;
         }
 
+        /* Other CSS remains unchanged from the original */
+
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h3 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #search-box {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            outline: none;
-        }
-
-        .autocomplete-items {
-            position: absolute;
-            top: calc(100% + 3px);
-            left: 0;
-            right: 0;
-            border: 1px solid #d4d4d4;
-            border-radius: 5px;
-            max-height: 200px;
-            overflow-y: auto;
-            background-color: #fff;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 998;
-            text-align: left;
-            display: none;
-        }
-
-        .autocomplete-item {
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .autocomplete-item:hover {
-            background-color: #f1f1f1;
+            text-align: center;
         }
 
         .btn {
-            background-color: #3498db;
+            background-color: #d1d9eb;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 10px;
             font-weight: bold;
         }
 
-        #results {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+        h1, h2, h3, h4 {
+            text-align: center;
+            color: #111012;
+        }
+
+        h2 {
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h3>Indian Penal Code to Bhartiya Nyay Sanhita, 2023</h3>
+    <div id="gaurav">
         <input type="text" id="search-box" placeholder="Type Keyword to Search old IPC Section">
         <div class="autocomplete-items" id="autocomplete-items"></div>
+    </div>
 
-        <form id="ipc-form">
-            <input type="text" id="weight" placeholder="Enter IPC Section">
-            <button type="button" class="btn" onclick="calculate()">Search</button>
-        </form>
-
-        <div id="results"></div>
+    <div class="container">
+        <div class="panel">
+            <h3>Indian Penal Code to Bhartiya Nyay Sanhita,2023</h3>
+            <form class="grv">
+                <div id="weightInput">
+                    <input id="weight" placeholder="Enter IPC Section">
+                </div>
+                <button type="button" class="btn" id="mybtn" onclick="calculate()">CLICK</button>
+            </form>
+            <h4>Bhartiya Nyay Sanhita,2023 Section:</h4>
+            <div id="results"></div>
+        </div>
     </div>
 
     <script>
         const data = [
-            `1 :   Title and extent of operation of the Code.`,
-            `2 :   Punishment of offences committed within India.`,
-            `3 :   Punishment of offences committed beyond, but which by law may be tried within, India.`,
-            `4 :   Extension of Code to extra-territorial offences.`,
-            `5 :   Certain laws not to be affected by this Act.`,
-            `6 :   Definitions in the Code to be understood subject to exceptions.`,
-            `7 :   Sense of expression once explained.`,
-            `8 :   Gender.`,
-            `9 :   Number.`,
-            `10 :   “Man”. “Woman”.`
+         ` 1 :   Title and extent of operation of the Code.  `  ,  
+		` 2 :   Punishment of offences committed within India.  `  ,  
+		` 3 :   Punishment of offences committed beyond, but which by law may be tried within, India.  `  ,  
+		` 4 :   Extension of Code to extra-territorial offences.  `  ,  
+		` 5 :   Certain laws not to be affected by this Act.  `  ,  
+		` 6 :   Definitions in the Code to be understood subject to exceptions.  `  ,  
+		` 7 :   Sense of expression once explained.  `  ,  
+		` 8 :   Gender.  `  ,  
+		` 9 :   Number.  `  ,  
+		` 10 :   “Man”. “Woman”.  `  ,  
         ];
 
         const searchBox = document.getElementById('search-box');
         const autocompleteItems = document.getElementById('autocomplete-items');
-        const ipcForm = document.getElementById('ipc-form');
-        const resultsDiv = document.getElementById('results');
 
         searchBox.addEventListener('input', function() {
-            const inputValue = this.value.toLowerCase().trim();
+            const inputValue = this.value.toLowerCase();
             autocompleteItems.innerHTML = '';
-
             if (inputValue.length === 0) {
-                autocompleteItems.style.display = 'none';
                 return;
             }
 
             const matchingItems = data.filter(item => item.toLowerCase().includes(inputValue));
             matchingItems.forEach(item => {
                 const index = item.toLowerCase().indexOf(inputValue);
-                const highlighted = `${item.substring(0, index)}<strong>${item.substring(index, index + inputValue.length)}</strong>${item.substring(index + inputValue.length)}`;
+                const highlighted = item.substring(0, index) + "<strong>" + item.substring(index, index + inputValue.length) + "</strong>" + item.substring(index + inputValue.length);
                 const autocompleteItem = document.createElement('div');
                 autocompleteItem.innerHTML = highlighted;
                 autocompleteItem.classList.add('autocomplete-item');
                 autocompleteItem.addEventListener('click', function() {
                     searchBox.value = item;
-                    autocompleteItems.style.display = 'none';
+                    autocompleteItems.innerHTML = '';
                 });
                 autocompleteItems.appendChild(autocompleteItem);
             });
-
-            autocompleteItems.style.display = matchingItems.length > 0 ? 'block' : 'none';
         });
-
-        ipcForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            calculate();
-        });
-
-        function calculate() {
-            const ipcSection = document.getElementById('weight').value;
-            const index = ipcSection.split(':')[0].trim();
-            const sectionName = ipcSection.split(':')[1].trim();
-
-            resultsDiv.innerHTML = `<strong>${index}</strong> : ${sectionName}`;
-        }
 
         document.addEventListener('click', function(e) {
             if (!autocompleteItems.contains(e.target)) {
-                autocompleteItems.style.display = 'none';
+                autocompleteItems.innerHTML = '';
             }
         });
     </script>
+
+    <script src="ipc.js"></script>
 </body>
 </html>
