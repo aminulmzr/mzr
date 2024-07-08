@@ -25,6 +25,7 @@
 
         h3 {
             color: #333;
+            margin-bottom: 20px;
         }
 
         #search-box {
@@ -139,11 +140,7 @@
                 autocompleteItems.appendChild(autocompleteItem);
             });
 
-            if (matchingItems.length > 0) {
-                autocompleteItems.style.display = 'block';
-            } else {
-                autocompleteItems.style.display = 'none';
-            }
+            autocompleteItems.style.display = matchingItems.length > 0 ? 'block' : 'none';
         });
 
         ipcForm.addEventListener('submit', function(e) {
