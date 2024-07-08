@@ -1,55 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sanhita</title>
-      
+    <title>Sanhita</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f0f0f0; /* Light gray background */
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh; /* Full viewport height */
         }
-        
         .container {
-            text-align: center;
             max-width: 600px; /* Adjust based on your content */
             background-color: #ffffff; /* White background */
-            padding: 20px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        
         .btn {
             width: 100%;
             max-width: 300px; /* Adjust button width */
-            height: 100px; /* Adjust button height */
+            height: 50px; /* Adjust button height */
             margin: 10px 0;
             border: none;
             border-radius: 8px;
             font-size: 16px;
             font-weight: bold;
             color: #ffffff; /* White text */
-            background-color: #142bb3; /* Blue background */
+            background-color: #3498db; /* Blue background */
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        
         .btn:hover {
-            background-color: #0a1659; /* Darker blue on hover */
+            background-color: #2980b9; /* Darker blue on hover */
         }
-        
         h3 {
             font-weight: bold;
             color: #333333; /* Dark text color */
+            margin-bottom: 20px;
         }
-        
         .blk {
             display: flex;
             flex-direction: column;
@@ -57,32 +60,34 @@
             justify-content: center;
             margin-top: 20px;
         }
-        
-        .footer {
+        /* Added styles */
+        .container {
+            background-color: #fff; /* White background */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background-color: #4CAF50; /* Green background */
+        }
+        .btn:hover {
+            background-color: #3e8e41; /* Darker green on hover */
+        }
+        .credit {
+            font-size: 16px;
+            color: #666;
             text-align: center;
-            position: fixed;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            font-size: 14px;
-            color: #555;
+            margin-top: 20px;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h3>Old To New Criminal Law Explainer</h3>
-        
         <div class="blk">
             <a href="ipcbns.html"><button type="button" class="btn">Bhartiya Nyay Sanhita, 2023<br>भारतीय न्याय संहिता, 2023</button></a>
             <a href="crpcbnss.html"><button type="button" class="btn">Bhartiya Nagrik Suraksha Sanhita, 2023<br>भारतीय नागरिक सुरक्षा संहिता, 2023</button></a>
             <a href="evdbsa.html"><button type="button" class="btn">Bhartiya Sakshya Adhiniyam, 2023<br>भारतीय साक्ष्य अधिनियम, 2023</button></a>
         </div>
-    </div>
-
-    <div class="footer">
-        Developed by Aminul Mazumder
+        <p class="credit">Developed by Aminul Mazumder</p>
     </div>
 </body>
 </html>
