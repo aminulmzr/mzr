@@ -689,32 +689,26 @@
 
             const matchingItems = data.filter(item => item.toLowerCase().includes(inputValue));
             matchingItems.forEach(item => {
-                const [code, description] = item.split(':');
-                const highlighted = `${code}: <strong>${description}</strong>`;
+                const index = item.toLowerCase().indexOf(inputValue);
+                const highlighted = item.substring(0, index) + "<strong>" + item.substring(index, index + inputValue.length) + "</strong>" + item.substring(index + inputValue.length);
                 const autocompleteItem = document.createElement('div');
                 autocompleteItem.innerHTML = highlighted;
                 autocompleteItem.classList.add('autocomplete-item');
                 autocompleteItem.addEventListener('click', function() {
                     searchBox.value = item;
-                    autocompleteItems.style.display = 'none';
+                    autocompleteItems.innerHTML = '';
                 });
                 autocompleteItems.appendChild(autocompleteItem);
             });
-
-            autocompleteItems.style.display = 'block';
         });
 
         document.addEventListener('click', function(e) {
-            if (!autocompleteItems.contains(e.target) && e.target !== searchBox) {
-                autocompleteItems.style.display = 'none';
+            if (!autocompleteItems.contains(e.target)) {
+                autocompleteItems.innerHTML = '';
             }
         });
-
-        function calculate() {
-            // Add your calculate function logic here
-            // For now, let's just alert the selected value
-            alert(searchBox.value);
-        }
     </script>
+
+    <script src="ipc.js"></script>
 </body>
 </html>
