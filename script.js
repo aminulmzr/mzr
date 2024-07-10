@@ -1,9 +1,8 @@
-document.getElementById('dataForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const date = document.getElementById('date').value;
-    
-    const outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = `<p>Name: ${name}</p><p>Date: ${date}</p>`;
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle Contact Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for contacting us!');
+    });
+
+    // Handle Events Registration Form Submission
