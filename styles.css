@@ -1,24 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
 header {
     background-color: #333;
     color: white;
     padding: 10px 0;
-    text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    text-align: center;
 }
 
 nav ul li {
@@ -35,71 +48,83 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-}
-
-h1, h2 {
-    text-align: center;
-    color: #333;
-}
-
+/* Hero Section Styling */
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('images/college.jpg') no-repeat center center/cover;
     color: white;
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
 .hero h2 {
-    margin: 0;
-}
-
-.about, .contact, .registration {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="email"], select, textarea {
-    padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
 }
 
-button {
+.hero p {
+    font-size: 1.2em;
+}
+
+/* About Section Styling */
+.about {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Group Section Styling */
+.group {
+    background-color: #eaeaea;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.group h2 {
+    margin-bottom: 20px;
+}
+
+.group .btn {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #333;
     color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-button:hover {
+.group .btn:hover {
     background-color: #555;
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .hero h2, .about h2, .group h2 {
+        font-size: 1.6em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
