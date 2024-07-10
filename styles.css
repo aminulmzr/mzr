@@ -12,31 +12,69 @@ header {
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
 
-form {
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.about, .contact, .registration {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-input[type="text"], input[type="date"] {
-    width: calc(100% - 20px);
+input[type="text"], input[type="email"], select, textarea {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -44,7 +82,6 @@ input[type="text"], input[type="date"] {
 }
 
 button {
-    display: inline-block;
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -57,10 +94,12 @@ button:hover {
     background-color: #555;
 }
 
-.output {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
