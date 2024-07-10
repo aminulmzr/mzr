@@ -3,41 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Year Celebration Party</title>
+    <title>Form Submission</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>New Year Celebration Party</h1>
+        <h1>Form Submission</h1>
     </header>
     <div class="container">
-        <h2>Contributions</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Name">John Doe</td>
-                    <td data-label="Amount">$50</td>
-                </tr>
-                <tr>
-                    <td data-label="Name">Jane Smith</td>
-                    <td data-label="Amount">$30</td>
-                </tr>
-                <tr>
-                    <td data-label="Name">Sam Wilson</td>
-                    <td data-label="Amount">$40</td>
-                </tr>
-                <tr>
-                    <td data-label="Name">Lisa Wong</td>
-                    <td data-label="Amount">$25</td>
-                </tr>
-            </tbody>
-        </table>
+        <form id="dataForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="output" class="output"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
