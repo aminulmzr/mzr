@@ -3,48 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Juniors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Results 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Welcome Juniors</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#group">Join Our Group</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to the Department of XYZ</h2>
-                <p>We are thrilled to have you join our family! Your journey at XYZ College is going to be an exciting one.</p>
-            </div>
-        </section>
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Our Department</h2>
-                <p>The Department of XYZ at ABC College is known for its academic excellence and vibrant community. We offer a variety of courses that cater to the diverse interests and career aspirations of our students.</p>
-            </div>
-        </section>
-        <section id="group" class="group">
-            <div class="container">
-                <h2>Join Our Official Group</h2>
-                <p>Stay connected with us by joining our official group. Click the link below to join.</p>
-                <a href="https://example.com" class="btn" target="_blank">Join Now</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 XYZ Department, ABC College. All rights reserved.</p>
-        </div>
-    </footer>
+    <h1>Exam Results 2024</h1>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+                <th>Subject 3</th>
+                <th>Subject 4</th>
+                <th>Subject 5</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here by JavaScript -->
+        </tbody>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
